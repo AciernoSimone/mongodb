@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+  <ul class="navbar-nav">
+    <li>
+      <a>FILM</a>
+    </li>
+
+    <li class="nav-item">
+      <a class= 'btn btn-primary' (click)="load10Movies()">Carica 10 film</a>
+      <div class="card-columns">
+        <div *ngFor="let movie of results" class= 'card'>
+            <img class = 'card-img-top'[src]="photoURL(movie.poster)" alt='Movie Poster'>
+            <div class="card-body text-center">
+              <h1 class= 'card-title'>{{movie.title}}</h1>
+              <p class='card-text'>{{movie.fullplot}}</p>
+            </div>
+          </div>
+        </div>
+
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link">Film Horror</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link">Film Comici</a>
+    </li>
+
+  </ul>
+</nav>
