@@ -20,11 +20,29 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link">Film Horror</a>
+      <a class= 'btn btn-primary' (click)="loadComedyMovies()">Film Comici</a>
+      <div class="card-columns">
+        <div *ngFor="let movie of results" class= 'card'>
+            <img class = 'card-img-top'[src]="photoURL(movie.poster)" alt='Movie Poster'>
+            <div class="card-body text-center">
+              <h1 class= 'card-title'>{{movie.title}}</h1>
+              <p class='card-text'>{{movie.fullplot}}</p>
+            </div>
+          </div>
+        </div>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link">Film Comici</a>
+      <a class= 'btn btn-primary' (click)="loadHorrorMovies()">Film Horror</a>
+      <div class="card-columns">
+        <div *ngFor="let movie of results" class= 'card'>
+            <img class = 'card-img-top'[src]="photoURL(movie.poster)" alt='Movie Poster'>
+            <div class="card-body text-center">
+              <h1 class= 'card-title'>{{movie.title}}</h1>
+              <p class='card-text'>{{movie.fullplot}}</p>
+            </div>
+          </div>
+        </div>
     </li>
 
   </ul>

@@ -20,6 +20,16 @@ export class AppComponent {
     this.obs = this.http.get("https://3010-f07b3e86-9f16-43c5-b1ab-0104e4199041.ws-eu01.gitpod.io/users");
     this.obs.subscribe(this.getData);
   }
+    loadHorrorMovies()
+  {
+    this.obs = this.http.get("https://3010-e263c9de-5d18-4273-affb-3f50cfa486a6.ws-eu01.gitpod.io/horror");
+    this.obs.subscribe(this.getData);
+  }
+    loadComedyMovies()
+  {
+    this.obs = this.http.get("https://3010-f07b3e86-9f16-43c5-b1ab-0104e4199041.ws-eu01.gitpod.io/comici");
+    this.obs.subscribe(this.getData);
+  }
 
   getData = (data) => {
     this.results = data;
